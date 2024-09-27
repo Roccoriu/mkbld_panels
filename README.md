@@ -1,7 +1,7 @@
 # MKBLD (because grifting is bad)
 ---
 
-This is a cross-platform image downloader written in Go. It can download images from various sources and organize them into directories based on their quality.
+This is a cross-platform image downloader written in Go. It can download the images from the panels app for free and in full quality. It does download everything though.
 
 ## Features
 
