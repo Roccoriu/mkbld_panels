@@ -21,6 +21,7 @@ Here you can find the relevant binaries for each platform. ARM binaries are incl
 ## Run
 1. Download the appropriate version for your platform and architecture.
 2. Run the application like any other, you may have to allow list it as it is not an officially signed app.
+3. Wait until the app finishes, it will automatically close after it is done downloading everything. It will log every step of the process.
 
 
 ## FAQ
