@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 )
@@ -26,13 +27,13 @@ type ImagerReg struct {
 }
 
 func getImgname(quality, link, ext string) string {
-	url, _ := url.Parse(link)
+	parsedUrl, _ := url.Parse(link)
 
-	noTilde := strings.ReplaceAll(url.Path[1:], "~", "_")
+	noTilde := strings.ReplaceAll(parsedUrl.Path[1:], "~", "_")
 	noSlash := strings.ReplaceAll(noTilde, "/", "_")
 	cleanedName := strings.Split(noSlash, ".")[0]
 
-	return fmt.Sprintf("%s/%s%s", quality, cleanedName, ext)
+	return filepath.Join(quality, cleanedName+ext)
 }
 
 func downloadImg(imgUrl, quality string) error {
